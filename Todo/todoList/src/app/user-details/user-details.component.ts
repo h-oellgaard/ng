@@ -7,11 +7,13 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class UserDetailsComponent implements OnInit, OnDestroy{
 
-  constructor() { }
+  constructor() {
+    alert('hi'); 
+   }
 
   ngOnInit(): void{
 
-    alert('hi'); 
+   
 
   }
  

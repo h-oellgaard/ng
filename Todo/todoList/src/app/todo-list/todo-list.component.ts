@@ -12,10 +12,11 @@ someBool = false;
 list: any;
   constructor(todoListService: TodoListService) {
     this.list = todoListService.getList();
+    todoListService.addItem({description:'new Task', importance: 2, title:'Another task!!'})
    }
 
   ngOnInit(): void {
-    alert('from service: ' + this.list)
+    // alert('from service: ' + this.list)
   }
 
 }
