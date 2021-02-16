@@ -8,15 +8,24 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 export class UserDetailsComponent implements OnInit, OnDestroy{
 
   constructor() {
-    alert('hi'); 
+    // alert('hi'); 
+
+
    }
 
   ngOnInit(): void{
 
-   
+    const promise = new Promise(function(resolve, reject){
 
+      setTimeout(function(){
+        resolve('hi there')
+      }, 1500);
+
+    });
+    promise.then(function(val){
+      alert(val);
+    });
   }
- 
 
   ngOnDestroy(): void{
     alert('bye'); 
